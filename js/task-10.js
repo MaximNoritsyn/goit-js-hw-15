@@ -24,12 +24,17 @@ function createBoxes(amount) {
   boxesEl.append(...boxes);
 }
 
+function destroyBoxes() {
+  boxesEl.innerHTML = '';
+}
+
 function handlerCreateBoxes() {
+  destroyBoxes();
   createBoxes(amountEl.value);
 }
 
 function handlerDestroyBoxes() {
-  boxesEl.innerHTML = '';
+  destroyBoxes();
 }
 
 // events
